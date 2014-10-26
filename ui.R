@@ -1,15 +1,43 @@
 library(shiny)
-shinyUI( pageWithSidebar(
-    # Application title 
-    headerPanel("Diabetes prediction"),
+
+shinyUI(fluidPage(
+  titlePanel("StockPrices"),
+  
+  sidebarLayout(
     sidebarPanel(
-        numericInput('glucose', 'Glucose mg/dl', 90, min = 50, max = 200, step = 5), 
-        submitButton('Submit')
-    ), 
-    mainPanel(
-        h3('Results of prediction'),
-        h4('You entered'), verbatimTextOutput("inputValue"), 
-        h4('Which resulted in a prediction of '), verbatimTextOutput("prediction")
-        ) 
-    )
-)
+      helpText("Select a stock to examine. 
+        Information will be collected from yahoo finance. 
+        Some common symbols are GOOG (Google), AAPL (Apple), 
+        GS (Goldman Sachs) or CSCO (Cisco)."),
+    
+      textInput("symb", "Symbol", "SPY"),
+    
+      dateRangeInput("dates", 
+        "Date range",
+        start = "2013-01-01", 
+        end = as.character(Sys.Date())),
+   
+      actionButton("get", "Get Stock"),
+      
+      br(),
+      br(),
+      
+      checkboxInput("log", "Plot y axis on log scale", 
+        value = FALSE),
+      
+      checkboxInput("adjust", 
+        "Adjust prices for inflation", value = FALSE),
+      
+      br(),
+      
+      selectInput("typeGraph", "Select type of graph", 
+                  choices = list("Candlesticks" = "candlesticks", 
+                                 "Matchsticks" = "matchsticks",
+                                 "Bars" = "bars",
+                                 "Line" = "line" ), 
+                  selected = "line")
+    ),
+    
+    mainPanel(plotOutput("plot"))
+  )
+))

@@ -52,29 +52,20 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 
 
-<div id="dpcourseproject" class="section level1">
-<h1>DPCourseProject</h1>
-<div id="your-shiny-application" class="section level2">
-<h2>Your Shiny Application</h2>
-<p>1.Write a shiny application with associated supporting documentation. The documentation should be thought of as whatever a user will need to get started using your application.</p>
-<p>2.Deploy the application on Rstudio’s shiny server</p>
-<p>3.Share the application link by pasting it into the text box below</p>
-<p>3.Share your server.R and ui.R code on github</p>
-<p>The application must include the following:</p>
-<p>1.Some form of input (widget: textbox, radio button, checkbox, …)<br />2.Some operation on the ui input in sever.R<br />3.Some reactive output displayed as a result of server calculations<br />3.You must also include enough documentation so that a novice user could use your application.<br />3.The documentation should be at the Shiny website itself. Do not post to an external link.</p>
-<p>The Shiny application in question is entirely up to you. However, if you’re having trouble coming up with ideas, you could start from the simple prediction algorithm done in class and build a new algorithm on one of the R datasets packages. Please make the package simple for the end user, so that they don’t need a lot of your prerequisite knowledge to evaluate your application. You should emphasize a simple project given the short time frame.</p>
-</div>
-<div id="your-reproducible-pitch-presentation" class="section level2">
-<h2>Your Reproducible Pitch Presentation</h2>
-<p>OK, you’ve made your shiny app, now it’s time to make your pitch. You get 5 slides (inclusive of the title slide) to pitch a your app. You’re going to create a web page using Slidify or Rstudio Presenter with an html5 slide deck.</p>
-<p>Here’s what you need</p>
-<p>5 slides to pitch our idea done in Slidify or Rstudio Presenter Your presentation pushed to github or Rpubs A link to your github or Rpubs presentation pasted into the text box below Your presentation must satisfy the following</p>
-<p>It must be done in Slidify or Rstudio Presenter It must be 5 pages It must be hosted on github or Rpubs It must contained some embedded R code that gets run when slidifying the document</p>
-<p>Notice to publish your slidify presentation to github or Rpubs, there’s the publish command. This link outlines how to do it (it’s one line).</p>
-<p><a href="http://slidify.org/publish.html">http://slidify.org/publish.html</a></p>
-<p>Rstudio presenter has a button to publish directly to Rpubs <a href="https://support.rstudio.com/hc/en-us/articles/200714023-Displaying-and-Distributing-Presentations">https://support.rstudio.com/hc/en-us/articles/200714023-Displaying-and-Distributing-Presentations</a>. If you are using Rpubs, put in the link to the presentation into the submission box as a <a href="http://">http://</a> link not a <a href="https://">https://</a> link.</p>
-<p>You can also publish using both formats to github manually using gh-pages, though your github branch must have a .nojekyll fle and be on a branch names gh-pages. There’s more on gh-pages here <a href="https://pages.github.com/">https://pages.github.com/</a> and there is a video lecture outlining how to do this.</p>
-</div>
+<div id="stock-prices-application" class="section level1">
+<h1>Stock Prices Application</h1>
+<p>The stockPrices app looks up stock prices by ticker symbol and displays the results as a line chart. The app lets you:</p>
+<ol style="list-style-type: decimal">
+<li>Select a stock to examine,</li>
+<li>Pick a range of dates to review,</li>
+<li>Choose whether to plot stock prices or the log of the stock prices on the y axis,</li>
+<li>Decide whether or not to correct prices for inflation, and</li>
+<li>Choose which type of graph to display (line, candlestick, matchstick or bars).</li>
+</ol>
+<p>By default, it is displayed the <strong>SPY</strong> ticker (an index of the entire S &amp; P 500).</p>
+<p>To look up a different stock, type in a stock symbol that Yahoo finance will recognize.</p>
+<p>You can find a list of Yahoo’s stock symbols here [<a href="http://finance.yahoo.com/lookup">http://finance.yahoo.com/lookup</a>].</p>
+<p>Some common symbols are GOOG (Google), AAPL (Apple), and GS (Goldman Sachs).</p>
 </div>
 
 
